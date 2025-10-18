@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Xplore Labs - Developer of innovative mobile applications including Xplore Private Email Chat and Teer Results Daily. Privacy-focused apps with genuine value.">
+<meta name="keywords" content="Xplore Labs, mobile apps, privacy apps, email chat, teer results, app developer">
+<meta name="author" content="Xplore Labs">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Social Media -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dipakzeroseven.github.io/developer-portfolio/">
+<meta property="og:title" content="Xplore Labs - Developer Portfolio">
+<meta property="og:description" content="Crafting innovative mobile experiences with purpose">
+<meta property="og:image" content="https://dipakzeroseven.github.io/developer-portfolio/xplore_logo.png">
+    <title>Xplore Labs - Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            color: white;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .intro-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .intro-section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            color: #495057;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin: 40px 0 25px 0;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #495057;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .app-card {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            border-color: rgba(102, 126, 234, 0.4);
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 22px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .app-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+
+        .app-description {
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .app-features {
+            text-align: left;
+            width: 100%;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .app-features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .app-features li {
+            padding: 5px 0;
+            color: #495057;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .app-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .support-section {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .support-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .support-card h3 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .support-card .email-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            word-break: break-all;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .support-card .email-link:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .support-card p {
+            color: #6c757d;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .support-hours {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #495057;
+            text-align: center;
+        }
+
+        .about-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.95rem;
+            margin-top: 8px;
+        }
+
+        .footer-section {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e9ecef;
+        }
+
+        .footer-section p {
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+
+        .footer-section .company-name {
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .apps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .intro-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .intro-section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Xplore Labs",
+  "url": "https://dipakzeroseven.github.io/developer-portfolio/",
+  "logo": "https://dipakzeroseven.github.io/developer-portfolio/xplore_logo.png",
+  "description": "Crafting innovative mobile experiences with purpose",
+  "email": "xplorelabs@icloud.com",
+  "sameAs": [
+    "https://play.google.com/store/apps/developer?id=Xplore+Labs"
+  ]
+}
+</script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Xplore Labs</h1>
+            <p>Crafting innovative mobile experiences with purpose</p>
+        </div>
+
+        <div class="content">
+            <div class="intro-section">
+                <h2>Developer Portfolio</h2>
+                <p>I'm a solo developer focused on creating high-quality mobile applications that solve real problems and enhance user experiences.</p>
+            </div>
+
+            <h2>Our Applications</h2>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <img src="xplore_logo.png" alt="Xplore App Icon" class="app-icon">
+                    <div class="app-title">Xplore - Private Email Chat</div>
+                    <div class="app-description">
+                        Chat privately using email addresses without sharing your phone number. Plus get essential daily utilities - all in one privacy-focused app.
+                    </div>
+                    <div class="app-features">
+                        <ul>
+                            <li>Email-based secure messaging</li>
+                            <li>Real-time currency converter</li>
+                            <li>URL shortener & QR scanner</li>
+                            <li>Cloud storage & personal notes</li>
+                            <li>Wikipedia access & daily inspiration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <img src="teer_logo.png" alt="Teer Results App Icon" class="app-icon">
+                    <div class="app-title">Teer Results and Analysis</div>
+                    <div class="app-description">
+                        Fastest Teer results with exclusive analytics dashboard, pattern insights, and data-driven analysis for Shillong, Khanapara, and Juwai.
+                    </div>
+                    <div class="app-features">
+                        <ul>
+                            <li>Fastest daily results updates</li>
+                            <li>Exclusive 30-day analytics dashboard</li>
+                            <li>Complete historical archive</li>
+                            <li>Number frequency & pattern tracking</li>
+                            <li>Dark mode & clean interface</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Support & Contact</h2>
+            <div class="support-section">
+                <p style="text-align: center; font-size: 1.1rem; margin-bottom: 10px;">We're here to help! Reach out to us through the following channels:</p>
+                
+                <div class="support-grid">
+                    <div class="support-card">
+                        <h3>📧 Xplore App Support</h3>
+                        <a href="mailto:wecare@xplore.sbs" class="email-link">wecare@xplore.sbs</a>
+                        <p>For questions, issues, or feedback regarding the Xplore - Private Email Chat application.</p>
+                    </div>
+
+                    <div class="support-card">
+                        <h3>🎯 Teer Results Support</h3>
+                        <a href="mailto:support@teerresultsdaily.org" class="email-link">support@teerresultsdaily.org</a>
+                        <p>For inquiries about Teer Results and Analysis app or information verification.</p>
+                    </div>
+
+                    <div class="support-card">
+                        <h3>💼 General Inquiries</h3>
+                        <a href="mailto:xplorelabs@icloud.com" class="email-link">xplorelabs@icloud.com</a>
+                        <p>For business partnerships, press inquiries, or general questions about Xplore Labs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h2>About Xplore Labs</h2>
+                <p>Xplore Labs is my independent venture committed to developing applications that make a positive impact on users' daily lives. I believe in the power of technology to solve real problems while maintaining the highest standards of user privacy and data security.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Published Apps</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Privacy</div>
+                        <div class="stat-label">Focused</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Mon-Fri</div>
+                        <div class="stat-label">Support Hours<br>9 AM - 6 PM IST</div>
+                    </div>
+                </div>
+
+                <p style="margin-top: 25px;"><strong>Our Mission:</strong> To create innovative, user-centric mobile applications that respect user privacy, deliver exceptional experiences, and provide genuine value to our community.</p>
+            </div>
+
+            <div class="footer-section">
+                <p class="company-name">Xplore Labs</p>
+                <p>Building the future of mobile experiences, one app at a time.</p>
+                <p style="margin-top: 20px; font-size: 0.85rem; color: #adb5bd;">
+                    © 2025 Xplore Labs. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
